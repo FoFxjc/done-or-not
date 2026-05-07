@@ -15,8 +15,10 @@
 ## Record Note
 
 - This template may also be used for dated discovery records and baseline readiness records.
-- A discovery record must state: `This is a discovery record, not a feature authenticity verdict.`
-- A main baseline readiness record should avoid merge wording when no active merge is pending.
+- A discovery record must state:
+  `This is a discovery record, not a feature authenticity verdict.`
+- A main baseline readiness record should avoid merge wording when no
+  active merge is pending.
 
 ## Expected Behavior
 
@@ -55,7 +57,11 @@
 ## Namespace Alignment Notes
 
 - Different identifiers across namespaces are not automatically drift.
-- Example mappings such as DB status `fired`, event type `trigger_marked_triggered`, attention kind `trigger_fired`, and product copy `triggered` / `fired` may all be acceptable when namespace boundaries are clear, the mapping is consistent, and tests cover user-visible behavior.
+- Example mappings such as DB status `fired`, event type
+  `trigger_marked_triggered`, attention kind `trigger_fired`, and
+  product copy `triggered` / `fired` may all be acceptable when
+  namespace boundaries are clear, the mapping is consistent, and tests
+  cover user-visible behavior.
 
 ## Completion Blockers
 

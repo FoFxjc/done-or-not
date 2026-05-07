@@ -1,10 +1,13 @@
 # Implementation Semantics
 
-Derived from `CLAUDE.md`, project docs, and initial codebase inspection; some items remain unconfirmed until feature audit.
+Derived from `CLAUDE.md`, project docs, and initial codebase
+inspection; some items remain unconfirmed until feature audit.
 
 ## Default Completion Standard
 
-A feature should not be considered complete unless the required behavior is supported by an evidence chain appropriate to the repository and branch context.
+A feature should not be considered complete unless the required behavior
+is supported by an evidence chain appropriate to the repository and
+branch context.
 
 ## Evidence Chain Definition
 
@@ -30,7 +33,9 @@ tests
 documentation claim alignment
 ```
 
-Not every feature uses every layer identically, but the audit should explain what equivalent evidence exists or why a layer is not applicable.
+Not every feature uses every layer identically, but the audit should
+explain what equivalent evidence exists or why a layer is not
+applicable.
 
 ## Fake Implementation Rule
 
@@ -51,15 +56,18 @@ Confirmed semantics -> real authenticity gate.
 ## Preliminary Vs Confirmed Audits
 
 - Preliminary audit: semantics are inferred, disputed, or incomplete
-- Confirmed audit: semantics are anchored by explicit user confirmation or official project documentation
+- Confirmed audit: semantics are anchored by explicit user confirmation
+  or official project documentation
 
-Preliminary audits should not be treated as final claims of falseness or merge blockage unless the user explicitly accepts the inferred scope.
+Preliminary audits should not be treated as final claims of falseness or
+merge blockage unless the user explicitly accepts the inferred scope.
 
 ## Interpretation Notes
 
 - Confirmed docs and decisions outrank inferred implementation shape.
 - Documentation drift should be separated from implementation falseness.
-- Missing tests matter, but test absence alone does not prove a feature is fake.
+- Missing tests matter, but test absence alone does not prove a feature
+  is fake.
 
 ## Implementation Artifact Status
 

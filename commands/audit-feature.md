@@ -1,22 +1,30 @@
 ---
-description: Audit a confirmed feature through an implementation evidence chain without modifying product code.
+description: Audit a confirmed feature through an implementation
+  evidence chain without modifying product code.
 ---
 
 # audit-feature
 
 ## When To Use This Command
 
-Use this command to audit one confirmed feature, or to produce a preliminary audit when feature scope is still inferred and not yet confirmed.
+Use this command to audit one confirmed feature, or to produce a
+preliminary audit when feature scope is still inferred and not yet
+confirmed.
 
-If invoked without a feature ID or feature name, this command should enter Feature Selection Mode instead of treating the invocation as an error.
+If invoked without a feature ID or feature name, this command should
+enter Feature Selection Mode instead of treating the invocation as an
+error.
 
 ## Operator Procedure
 
 1. Check whether project semantics and feature scope are already confirmed.
-2. If no feature ID or feature name was provided, enter Feature Selection Mode and stop before auditing.
-3. If not confirmed, run or request semantics discovery first and keep the result preliminary.
+2. If no feature ID or feature name was provided, enter Feature
+   Selection Mode and stop before auditing.
+3. If not confirmed, run or request semantics discovery first and keep
+   the result preliminary.
 4. Restate the feature, branch context, strictness, and out-of-scope areas.
-5. Define expected behavior from confirmed docs and user decisions, then separate inferred expectations.
+5. Define expected behavior from confirmed docs and user decisions, then
+   separate inferred expectations.
 6. Trace the evidence chain from UI through documentation alignment.
 7. Classify findings conservatively.
 8. Produce a verdict, blockers, risk highlights, placeholders, and next step.
@@ -29,8 +37,11 @@ If invoked without a feature ID or feature name, this command should enter Featu
 - Recommend fixes if helpful, but never implement them.
 - Focus on the selected feature, not unrelated repository issues.
 - If no feature was specified, do not run an audit and do not classify any feature.
-- In Feature Selection Mode, read `docs/implementation-audit/feature-map.md` if available and present candidate features for scope confirmation.
-- State explicitly that no authenticity verdict will be issued until the feature scope is confirmed.
+- In Feature Selection Mode, read
+  `docs/implementation-audit/feature-map.md` if available and present
+  candidate features for scope confirmation.
+- State explicitly that no authenticity verdict will be issued until the
+  feature scope is confirmed.
 
 ## Evidence Chain
 
@@ -136,7 +147,8 @@ Otherwise:
 
 ## Findings
 ### Finding 1: <Title>
-- Classification: Completion Blocker / Risk Highlight / Existing Placeholder / Future Work / Documentation Drift / Non-Issue
+- Classification: Completion Blocker / Risk Highlight / Existing
+  Placeholder / Future Work / Documentation Drift / Non-Issue
 - Severity:
 - Evidence:
 - Why it matters:

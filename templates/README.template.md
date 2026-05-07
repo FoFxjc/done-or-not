@@ -2,7 +2,10 @@
 
 This folder stores implementation audit records for the repository.
 
-It does not replace official product documentation. It preserves audit context that helps future reviewers understand what was believed, what was confirmed, what remained uncertain, and what evidence supported merge or completion claims.
+It does not replace official product documentation. It preserves audit
+context that helps future reviewers understand what was believed, what
+was confirmed, what remained uncertain, and what evidence supported
+merge or completion claims.
 
 ## What Belongs Here
 

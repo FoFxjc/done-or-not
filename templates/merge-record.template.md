@@ -5,7 +5,8 @@
 - Recorded at:
 - Source branch:
 - Target branch:
-- Record path convention: `docs/implementation-audit/merges/YYYY-MM-DDTHHMM-<topic>.md`
+- Record path convention:
+  `docs/implementation-audit/merges/YYYY-MM-DDTHHMM-<topic>.md`
 
 ## Feature Scope
 
@@ -28,7 +29,9 @@
 
 - Ready / Ready with warnings / Blocked / Needs confirmation
 
-Use this template only when an active merge context exists. Do not use it for `main` or `master` baseline review with a clean working tree and no active merge pending. In that case, save under:
+Use this template only when an active merge context exists. Do not use
+it for `main` or `master` baseline review with a clean working tree and
+no active merge pending. In that case, save under:
 
 `docs/implementation-audit/audits/YYYY-MM-DDTHHMM-main-baseline-readiness.md`
 

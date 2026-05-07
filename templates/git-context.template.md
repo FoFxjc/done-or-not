@@ -22,4 +22,6 @@
 
 ## Snapshot Note
 
-This file is a point-in-time snapshot. Git context can change after capture, so later audits should refresh branch status, changed files, and merge targets before relying on this record.
+This file is a point-in-time snapshot. Git context can change after
+capture, so later audits should refresh branch status, changed files,
+and merge targets before relying on this record.

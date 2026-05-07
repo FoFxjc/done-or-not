@@ -1,6 +1,7 @@
 ---
 name: done-or-not
-description: Audit whether a claimed feature is actually done without modifying product implementation.
+description: Audit whether a claimed feature is actually done without
+  modifying product implementation.
 tools: Read, Glob, Grep, Bash, Write
 ---
 
@@ -8,7 +9,9 @@ tools: Read, Glob, Grep, Bash, Write
 
 ## Purpose
 
-Use this skill to audit whether claimed feature work in a repository is truly implemented, semantically aligned, and supported by real implementation evidence.
+Use this skill to audit whether claimed feature work in a repository is
+truly implemented, semantically aligned, and supported by real
+implementation evidence.
 
 This skill is an auditor, not a developer.
 
@@ -41,9 +44,14 @@ The skill must not write outside `docs/implementation-audit/`.
 
 The skill must never modify product implementation.
 
-Discovery and proposal phases must not use final verdict language such as `Implemented`, `Real`, `Mostly real`, `Fake`, `Non-operational`, or `Drifted`.
+Discovery and proposal phases must not use final verdict language such
+as `Implemented`, `Real`, `Mostly real`, `Fake`, `Non-operational`, or
+`Drifted`.
 
-During discovery and proposal, use only provisional or presence-oriented labels such as `Proposed`, `Claimed`, `Documented`, `Observed`, `Inferred`, `Unknown`, `Future`, `Conflict`, `Confirmed`, and `Not audited`.
+During discovery and proposal, use only provisional or
+presence-oriented labels such as `Proposed`, `Claimed`, `Documented`,
+`Observed`, `Inferred`, `Unknown`, `Future`, `Conflict`, `Confirmed`,
+and `Not audited`.
 
 Operating invariant:
 
@@ -55,7 +63,8 @@ Never modify implementation.
 
 ## Invocation Boundary
 
-Done or Not enforces its audit-only behavior when invoked through its namespaced plugin commands:
+Done or Not enforces its audit-only behavior when invoked through its
+namespaced plugin commands:
 
 - `/done-or-not:discover-project-semantics`
 - `/done-or-not:propose-audit-docs`
@@ -112,7 +121,8 @@ Branch-aware strictness matters:
 - `hotfix/*`: very high strictness
 - `prototype/*` / `spike/*`: placeholder-tolerant only if clearly labeled
 
-When PR and remote state have not been checked from local context, say so explicitly rather than inferring them.
+When PR and remote state have not been checked from local context, say
+so explicitly rather than inferring them.
 
 ## Document-First Discovery
 
@@ -136,10 +146,14 @@ If a feature map is produced here, use split status columns:
 
 Rules:
 
-- `Presence Status` may be `Proposed`, `Claimed`, `Documented`, `Observed`, `Inferred`, `Unknown`, `Future`, `Conflict`, or `Confirmed`.
-- `Authenticity Status` may be `Not audited`, `Preliminary`, `Partial`, `Mostly real`, `Real`, `Non-operational`, `Fake`, or `Drifted`.
+- `Presence Status` may be `Proposed`, `Claimed`, `Documented`,
+  `Observed`, `Inferred`, `Unknown`, `Future`, `Conflict`, or
+  `Confirmed`.
+- `Authenticity Status` may be `Not audited`, `Preliminary`, `Partial`,
+  `Mostly real`, `Real`, `Non-operational`, `Fake`, or `Drifted`.
 - In discovery, `Authenticity Status` defaults to `Not audited`.
-- Do not upgrade `Claimed`, `Observed`, or `Inferred` to implementation verdict language before a scoped audit.
+- Do not upgrade `Claimed`, `Observed`, or `Inferred` to
+  implementation verdict language before a scoped audit.
 
 ## Cold Start Mode
 
@@ -246,7 +260,8 @@ Check:
 - documentation overclaim
 - branch-specific strictness
 
-If auditing `main` or `master` with a clean working tree and no active source/target merge, enter Main Baseline Readiness Mode.
+If auditing `main` or `master` with a clean working tree and no active
+source/target merge, enter Main Baseline Readiness Mode.
 
 In Main Baseline Readiness Mode:
 
@@ -271,7 +286,10 @@ Do not merge, commit, or modify code.
 docs/implementation-audit/
 ```
 
-If a user requests an out-of-bound write such as `README.md`, `docs/<anything outside implementation-audit>`, or `tests/...`, explicitly refuse each requested path verbatim first, then offer allowed replacements only under `docs/implementation-audit/`.
+If a user requests an out-of-bound write such as `README.md`,
+`docs/<anything outside implementation-audit>`, or `tests/...`,
+explicitly refuse each requested path verbatim first, then offer
+allowed replacements only under `docs/implementation-audit/`.
 
 This includes optional long-lived files and append-only records such as:
 
@@ -288,9 +306,13 @@ Never write outside that folder in the audited repository.
 
 Discovery handoff rule:
 
-- `/done-or-not:discover-project-semantics` is read-only and must end with an audit-memory status section.
-- If the user wants to save the discovery, the suggested append-only path is `docs/implementation-audit/audits/YYYY-MM-DDTHHMM-project-semantics-discovery.md`.
-- The discovery record must clearly state that it is a discovery record, not a feature authenticity verdict.
+- `/done-or-not:discover-project-semantics` is read-only and must end
+  with an audit-memory status section.
+- If the user wants to save the discovery, the suggested append-only
+  path is
+  `docs/implementation-audit/audits/YYYY-MM-DDTHHMM-project-semantics-discovery.md`.
+- The discovery record must clearly state that it is a discovery
+  record, not a feature authenticity verdict.
 
 ## Output Formats
 
@@ -309,7 +331,12 @@ Use explicit section headings, evidence tables, conservative notes, and clear co
 - Never modify product implementation.
 - Never add tests.
 - Never fix placeholders directly.
-- Never alter schemas, migrations, package files, CI, or official docs outside the audit folder.
-- Never claim a feature is fake without confirmed or strongly evidenced semantics.
-- Prefer `preliminary`, `inferred`, or `needs confirmation` over overconfident judgment.
-- Different identifiers across namespaces are not automatically drift if namespace boundaries are clear, the mapping is consistent, and tests cover user-visible behavior.
+- Never alter schemas, migrations, package files, CI, or official docs
+  outside the audit folder.
+- Never claim a feature is fake without confirmed or strongly evidenced
+  semantics.
+- Prefer `preliminary`, `inferred`, or `needs confirmation` over
+  overconfident judgment.
+- Different identifiers across namespaces are not automatically drift
+  if namespace boundaries are clear, the mapping is consistent, and
+  tests cover user-visible behavior.

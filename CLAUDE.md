@@ -10,16 +10,20 @@ This repository defines a Claude Code plugin named **Done or Not**.
 
 ## Hard Boundaries
 
-- Never modify product implementation as part of this plugin's intended behavior.
+- Never modify product implementation as part of this plugin's intended
+  behavior.
 - The audited repository write boundary is `docs/implementation-audit/` only.
-- Do not rename the project or the generated audit folder without user approval.
-- Do not add package dependencies, CI workflows, servers, databases, background tasks, or automation layers in v1.
+- Do not rename the project or the generated audit folder without user
+  approval.
+- Do not add package dependencies, CI workflows, servers, databases,
+  background tasks, or automation layers in v1.
 
 ## Authoring Guidance
 
 - Commands should be explicit, conservative, and usable through direct Claude Code invocation.
 - Skills should enforce Git-context-first discovery and semantics-before-judgment.
-- Templates should produce clean, future-automation-friendly markdown records.
+- Templates should produce clean, future-automation-friendly markdown
+  records.
 - Prefer clear audit language over dramatic language.
 - Avoid false positive fake findings.
 - Confirm or strongly evidence semantics before authenticity judgment.

@@ -1,17 +1,21 @@
 ---
-description: Discover Git context, project semantics, candidate features, and unknowns before any authenticity judgment.
+description: Discover Git context, project semantics, candidate
+  features, and unknowns before any authenticity judgment.
 ---
 
 # discover-project-semantics
 
 ## When To Use This Command
 
-Use this command when you need to reconstruct project intent before judging implementation. This command is read-only and should be the default starting point for any serious audit.
+Use this command when you need to reconstruct project intent before
+judging implementation. This command is read-only and should be the
+default starting point for any serious audit.
 
 ## Operator Procedure
 
 1. Inspect Git context before reading implementation details.
-2. Detect whether the repository is a new repo, cold start, existing audited project, feature branch, dev baseline, or main baseline.
+2. Detect whether the repository is a new repo, cold start, existing
+   audited project, feature branch, dev baseline, or main baseline.
 3. Read documents before code.
 4. Inspect the repository shape and implementation surface conservatively.
 5. Build a candidate feature map with presence labels and audit follow-ups.
@@ -25,10 +29,14 @@ Use this command when you need to reconstruct project intent before judging impl
 - This command must never modify product implementation.
 - Do not classify fake implementations here.
 - Do not write any files.
-- A user-provided feature name is only a scope hint until semantics are confirmed.
+- A user-provided feature name is only a scope hint until semantics are
+  confirmed.
 - Prefer documented intent over inferred code semantics when the two conflict.
-- Do not use final authenticity verdict language here, including `Implemented`, `Real`, `Mostly real`, `Fake`, `Non-operational`, or `Drifted`.
-- If a feature map is produced here, `Authenticity Status` must default to `Not audited`.
+- Do not use final authenticity verdict language here, including
+  `Implemented`, `Real`, `Mostly real`, `Fake`, `Non-operational`, or
+  `Drifted`.
+- If a feature map is produced here, `Authenticity Status` must default
+  to `Not audited`.
 
 ## Suggested Inspection Order
 
@@ -81,12 +89,8 @@ If the repo has code but no stable semantic audit context:
 # Project Semantics Discovery
 
 ## Mode
-- Mode: New Repo
-- Mode: Cold Start
-- Mode: Existing Project
-- Mode: Feature Branch
-- Mode: Dev Baseline
-- Mode: Main Baseline
+- Mode: <selected mode>
+- Reason:
 
 ## Git Context
 - Current branch
@@ -140,4 +144,5 @@ Suggested append-only record path:
 `docs/implementation-audit/audits/YYYY-MM-DDTHHMM-project-semantics-discovery.md`
 ```
 
-The mode field must print exactly one selected mode, not a mixed menu. A short explanation may follow the selected mode.
+The mode field must print exactly one selected mode, not a mixed menu.
+A short explanation may follow the selected mode.

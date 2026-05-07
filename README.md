@@ -2,7 +2,12 @@
 
 > Check whether "done" is actually done.
 
-Done or Not is a Claude Code plugin for auditing whether claimed AI-assisted feature work is actually implemented. It is markdown-first and audit-only: it reads a repository, compares claims against implementation evidence, and can save audit memory under `docs/implementation-audit/` in the target repo.
+Done or Not is a Claude Code plugin for auditing whether claimed
+AI-assisted feature work is actually implemented.
+
+It is markdown-first and audit-only: it reads a repository, compares
+claims against implementation evidence, and can save audit memory under
+`docs/implementation-audit/` in the target repo.
 
 Current version: `v0.1.2`
 
@@ -85,11 +90,16 @@ Discover project semantics
 
 ## How It Works
 
-Done or Not is a lightweight single-repo completion legitimacy layer for AI-assisted feature work.
+Done or Not is a lightweight single-repo completion legitimacy layer
+for AI-assisted feature work.
 
-It validates whether claimed feature and project implementations inside a repository are actually real.
+It validates whether claimed feature and project implementations inside
+a repository are actually real.
 
-It does not call a feature fake just because a code path looks suspicious. It first establishes project semantics, then allows stronger authenticity judgments only after scope is confirmed or strongly evidenced.
+It does not call a feature fake just because a code path looks
+suspicious. It first establishes project semantics, then allows
+stronger authenticity judgments only after scope is confirmed or
+strongly evidenced.
 
 Core rule:
 
@@ -113,17 +123,20 @@ docs/implementation-audit/
 └── merges/
 ```
 
-This folder is the project audit trail. It does not replace official product docs.
+This folder is the project audit trail. It does not replace official
+product docs.
 
 ## Feature Status Model
 
 Done or Not uses a split status model:
 
-| Presence Status | Authenticity Status |
+| Model Part | Allowed Values |
 |---|---|
-| Claimed / Observed / Inferred / Confirmed | Not audited / Preliminary / Partial / Real / Non-operational / Fake / Drifted |
+| Presence Status | `Claimed`, `Observed`, `Inferred`, `Confirmed` |
+| Authenticity Status | `Not audited`, `Preliminary`, `Partial`, `Real`, `Non-operational`, `Fake`, `Drifted` |
 
-Discovery and proposal phases never use final verdict language. During discovery, features keep `Authenticity Status: Not audited`.
+Discovery and proposal phases never use final verdict language. During
+discovery, features keep `Authenticity Status: Not audited`.
 
 ## Local Development
 
@@ -145,9 +158,15 @@ Load the plugin directly for local dogfooding:
 claude --plugin-dir /path/to/done-or-not
 ```
 
-If `/plugin` opens the generic plugin management UI and does not clearly list commands in your terminal, inspect the [`commands/`](commands/) directory or run a known namespaced command directly.
+If `/plugin` opens the generic plugin management UI and does not clearly
+list commands in your terminal, inspect the [`commands/`](commands/)
+directory or run a known namespaced command directly.
 
-If `claude --plugin-dir` fails with an `EPERM` error involving `~/.claude.json`, that is a local Claude CLI config or permission issue, not a plugin validation failure. Some sandboxed runners also cannot write under `~/.claude*`, which can block local plugin loading even when the plugin itself is valid.
+If `claude --plugin-dir` fails with an `EPERM` error involving
+`~/.claude.json`, that is a local Claude CLI config or permission
+issue, not a plugin validation failure. Some sandboxed runners also
+cannot write under `~/.claude*`, which can block local plugin loading
+even when the plugin itself is valid.
 
 ## File Structure
 
@@ -168,13 +187,17 @@ done-or-not/
 
 ## Positioning
 
-Done or Not is a lightweight single-repo completion legitimacy layer for AI-assisted feature work.
+Done or Not is a lightweight single-repo completion legitimacy layer
+for AI-assisted feature work.
 
-It validates whether claimed feature and project implementations inside a repository are actually real.
+It validates whether claimed feature and project implementations inside
+a repository are actually real.
 
-It is not an Agent OS, orchestration engine, workflow platform, memory system, task tracker, or multi-agent controller.
+It is not an Agent OS, orchestration engine, workflow platform, memory
+system, task tracker, or multi-agent controller.
 
-It focuses on repo-local feature claims, implementation evidence, authenticity verdicts, and audit records.
+It focuses on repo-local feature claims, implementation evidence,
+authenticity verdicts, and audit records.
 
 ## License
 
