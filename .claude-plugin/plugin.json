@@ -1,0 +1,8 @@
+{
+  "name": "done-or-not",
+  "version": "0.1.2",
+  "description": "Check whether AI-assisted feature work is actually done by auditing implementation evidence.",
+  "author": {
+    "name": "FoFxjc"
+  }
+}

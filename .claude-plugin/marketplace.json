@@ -1,0 +1,16 @@
+{
+  "name": "fofxjc",
+  "metadata": {
+    "description": "Claude Code marketplace for Done or Not, a completion legitimacy plugin for auditing whether claimed AI-assisted feature work is actually implemented."
+  },
+  "owner": {
+    "name": "FoFxjc"
+  },
+  "plugins": [
+    {
+      "name": "done-or-not",
+      "description": "Check whether AI-assisted feature work is actually done by auditing implementation evidence.",
+      "source": "./"
+    }
+  ]
+}
