@@ -38,7 +38,8 @@ audit-memory documents in the audited repository.
   product code, tests, or other protected areas.
 - After refusing the out-of-bound paths, separately offer allowed
   replacements only under `docs/implementation-audit/`.
-- Default baseline save flow may include
+- Default baseline save flow will include this discovery record unless
+  the user declines it:
   `docs/implementation-audit/audits/YYYY-MM-DDTHHMM-project-semantics-discovery.md`.
 - Any saved discovery record must clearly state:
   `This is a discovery record, not a feature authenticity verdict.`

@@ -150,7 +150,9 @@ Rules:
   `Observed`, `Inferred`, `Unknown`, `Future`, `Conflict`, or
   `Confirmed`.
 - `Authenticity Status` may be `Not audited`, `Preliminary`, `Partial`,
-  `Mostly real`, `Real`, `Non-operational`, `Fake`, or `Drifted`.
+  `Mostly real`, `Real`, `Non-operational`, `Fake`, or `Drifted`
+  (these values are defined here for reference; final authenticity
+  verdicts are not used during discovery).
 - In discovery, `Authenticity Status` defaults to `Not audited`.
 - Do not upgrade `Claimed`, `Observed`, or `Inferred` to
   implementation verdict language before a scoped audit.

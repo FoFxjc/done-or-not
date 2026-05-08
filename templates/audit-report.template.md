@@ -57,9 +57,9 @@
 ## Namespace Alignment Notes
 
 - Different identifiers across namespaces are not automatically drift.
-- Example mappings such as DB status `fired`, event type
-  `trigger_marked_triggered`, attention kind `trigger_fired`, and
-  product copy `triggered` / `fired` may all be acceptable when
+- Example mappings such as persistence status `<PersistenceState>`,
+  event type `<event-name>`, internal label `<InternalState>`, and
+  product copy `<UserVisibleState>` may all be acceptable when
   namespace boundaries are clear, the mapping is consistent, and tests
   cover user-visible behavior.
 

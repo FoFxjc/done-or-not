@@ -73,8 +73,8 @@ merge blockage unless the user explicitly accepts the inferred scope.
 
 | Artifact | Presence | Behavior Audit | Notes |
 |---|---|---|---|
-| `resolveAppMode()` | Observed | Not audited | Function exists; usage not traced |
-| `trigger_marked_triggered` event | Documented | Not audited | Confirm emission path during scoped feature audit |
+| `<FunctionName>()` | Observed | Not audited | Function exists; usage not traced |
+| `<event-name>` event | Documented | Not audited | Confirm emission path during scoped feature audit |
 
 ## Changelog
 

@@ -133,7 +133,7 @@ Done or Not uses a split status model:
 | Model Part | Allowed Values |
 |---|---|
 | Presence Status | `Claimed`, `Observed`, `Inferred`, `Confirmed` |
-| Authenticity Status | `Not audited`, `Preliminary`, `Partial`, `Real`, `Non-operational`, `Fake`, `Drifted` |
+| Authenticity Status | `Not audited`, `Preliminary`, `Partial`, `Mostly real`, `Real`, `Non-operational`, `Fake`, `Drifted` |
 
 Discovery and proposal phases never use final verdict language. During
 discovery, features keep `Authenticity Status: Not audited`.
